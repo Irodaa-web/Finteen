@@ -1,0 +1,1 @@
+import "./globals.css";export const metadata={title:"FinTeen",description:"Family financial literacy platform"};export default function Layout({children}){return <html lang="uz"><body>{children}</body></html>}

@@ -1,0 +1,2 @@
+import mongoose from "mongoose";
+const S=new mongoose.Schema({name:{type:String,required:true},email:{type:String,required:true,unique:true,lowercase:true},password:{type:String,required:true},role:{type:String,enum:["parent","child"],required:true},familyId:{type:mongoose.Schema.Types.ObjectId,ref:"Family",default:null},xp:{type:Number,default:0},wallet:{type:Number,default:0},saved:{type:Number,default:0},goal:{type:Number,default:0}},{timestamps:true}); export default mongoose.models.User||mongoose.model("User",S);
